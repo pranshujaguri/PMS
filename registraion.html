@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PMS | Project Management System</title>
+    <link rel="stylesheet" href="css/style1.css"> </head>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<body>
+    <div id="wrapper">
+        <div class="join">Join Today</div>
+        <div class="lock"></div>
+        <div class="clr"></div>
+        <div class="login-options">Choose on of the following sign up methods.</div> <a class="twitter" href="#">Twitter</a> <a class="facebook" href="#">Facebook</a> <a class="google" href="#">Google+</a>
+        <div class="clr">
+            <hr /> </div>
+        <div class="mail-text">COMPANY SIGNUP</div>
+        <div class="forms">
+            <form action="post" method="get" name="register">
+                <!--<label> company Name<span class="req">*</span> </label>-->
+                <input class="inputs" autofocus name="Companyname" type="text" maxlength="20" placeholder="Enter your company name..." size="70" onClick="border: 1px solid #30a8da;" id="compname" />
+                <input class="inputs" name="companytin" type="text" maxlength="10" placeholder="Enter your Comapny Tin no ..." size="70" onClick="border: 1px solid #30a8da;" id="comptin" />
+                <input class="inputs" name="companyadd" type="text" maxlength="20" placeholder="Address line 1..." size="70" onClick="border: 1px solid #30a8da;" id="comadd" />
+                <input class="inputs" name="companyadd" type="text" maxlength="20" placeholder="Address line 2..." size="70" onClick="border: 1px solid #30a8da;" id="comadd" />
+                <input class="inputs" name="email" type="text" maxlength="20" placeholder="Enter your email address..." size="70" onClick="border: 1px solid #30a8da;" id="" />
+                <input class="inputs" name="password" type="password" maxlength="10" placeholder="Enter a password..." size="70" onClick="border: 1px solid #30a8da;" id="" />
+                <input class="inputs" name="password" type="password" maxlength="10" placeholder="confirm your password..." size="70" onClick="border: 1px solid #30a8da;" id="" /> </form>
+        </div> <a class="create-acc" href="#">Create My Account</a> </div>
+</body>
+<script>
+    $(".inputs").keyup(function () {
+        if (this.value.length == this.maxLength) {
+            var $next = $(this).next('.inputs');
+            if ($next.length) $(this).next('.inputs').focus();
+            else $(this).blur();
+        }
+    });
+</script>
+
+</html>
